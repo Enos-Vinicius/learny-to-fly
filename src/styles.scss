@@ -1,1 +1,404 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$learn-to-fly-primary: mat.define-palette(mat.$indigo-palette);
+$learn-to-fly-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$learn-to-fly-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$learn-to-fly-theme: mat.define-light-theme((
+  color: (
+    primary: $learn-to-fly-primary,
+    accent: $learn-to-fly-accent,
+    warn: $learn-to-fly-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($learn-to-fly-theme);
+$green_clarity: #047453;
+$green_objectivity: #00A79D;
+$green_understanding: #5AD3A0;
+$ltf_gradient: linear-gradient(180deg, #2684FF 0%, #23BFB6 100%);
+
+body { margin: 0; font-family: Lato, "Lato", sans-serif; }
+
 /* You can add global styles to this file, and also import other style files */
+@media (min-width: 481px) {
+    .active-list-item {
+        opacity: 1 !important;
+        border-left: 2px solid #FFF !important;
+    }
+    .no-active-list-item {
+        opacity: 0.5;
+        border-left: 2px solid #FFF;
+    }
+    .menu-ltf {
+        width: 80px;
+        height: 100vh;
+        background: $ltf_gradient;
+        .menu-open {
+            background: rgba(0, 0, 0, 0.05);
+            height: 60px;
+        }
+        .menu-item {
+            height: 60px;
+            opacity: 0.5;
+        }
+        .menu-center {
+            width: 75px;
+            margin-top: 40px;
+        }
+        .menu-footer {
+            width: 75px;
+            margin-bottom: 45px;
+        }
+    }
+    .title-name {
+        margin-left: 110px;
+        font-family: 'Lato';
+        font-style: italic;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .form-header {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        margin-right: 40px;
+        .mat-form-field-wrapper {
+            padding-bottom: 0;
+        }
+    }
+    .banner {
+        margin-top: 60px;
+        height: 200px;
+        width: 100%;
+        background-color: #76DD9E;
+        .title {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 56px;
+            color: #FFF;
+        }
+        .container {
+            height: 200px;
+        }
+        .container-title {
+            width: 559px;
+            margin-bottom: 24px;
+            p {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                margin: 0;
+                color: #FFF;
+            }
+            .circle {
+                width: 34px;
+                height: 34px;
+                border-radius: 50%;
+                box-shadow: inset 0px 4px 2px rgba(0, 0, 0, 0.1), 2px 4px 4px rgba(0, 0, 0, 0.25);  
+                p {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    color: #000;
+                    margin: 0;
+                }              
+            }
+        }
+        .ellipse {
+            height: 173px;
+            width: 190px;
+            margin-bottom: 5px;
+            background-image: url('./assets/images/ellipse.svg');
+        }
+        .vector {
+            height: 200px;
+            left: 70px;
+            width: 60%;
+            background-image: url('./assets/images/vector.svg');
+            background-size: 100% auto;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            opacity: 0.2;
+        }
+    }
+    .tabs {
+        margin-left: 80px;
+        .tabs-title {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 32px;
+            color: #000;
+            text-align: center;
+        }
+    }
+    .img-menu {
+        width: 40px;
+    }
+    .title-h4 {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        color: #666D86;
+    }
+    .title-h3 {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 40px;
+        color: #666D86;
+    }
+    .title-h2 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;       
+        color: #00A79D;
+    }
+    .circle {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+    }
+    .title {
+        color: #6F727B;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .min-card {
+        width: 101px;
+        height: 118px;
+        opacity: 0.5;
+    }
+    .min-card-selected {
+        width: 101px;
+        height: 118px;
+        border: 1px solid transparent;
+        background: linear-gradient(#FFF, #FFF), $ltf_gradient;
+        border: 5px solid transparent;
+        background-repeat: no-repeat;
+        background-origin: padding-box, border-box;
+        margin-top: 16px;
+    }
+    .min-card-rounded {
+        border-radius: 15px;
+        border-width: 7px;
+        position: relative;
+    }
+    .min-card-rounded::before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        bottom: -5px;
+        left: -5px;
+        right: -5px;
+        border: 6px solid #FFF;
+        border-radius: .8rem;
+        box-shadow: 0px 4px 8px rgba(169, 178, 184, 0.4);
+    }
+    .green_clarity {
+        background-color: $green_clarity;
+    }
+    .green_objectivity {
+        background-color: $green_objectivity;
+    }
+    .green_understanding {
+        background-color: $green_understanding;
+    }
+    .sun-line {
+        background-image: url(./assets/icons/sun-line.svg);
+    }
+    .target {
+        background-image: url(./assets/icons/target.svg);
+    }
+    .heart {
+        background-image: url(./assets/icons/heart.svg);
+    }
+    .icon-card {
+        width: 30px;
+        height: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .card {
+        width: 100%;
+        height: 183px;
+        border: 2px solid #F2F3F5;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 8px rgba(169, 178, 184, 0.2);
+        border-radius: 8px;
+        background-repeat: no-repeat;
+    }
+    .title-card {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        color: #484D5F;
+    }
+    .status-card {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        background: #047453;
+        color: #FFF;
+        border-radius: 16px;
+        padding: 0 18px;
+    }
+    .time-card {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #666D86;
+    }
+    .time-icon {
+        width: 13px;
+        height: 13px;
+        background: url(./assets/icons/time.svg);
+        background-size: 100% 100%;
+        margin-top: 1px;
+    }
+    .success {
+        width: 64px;
+        height: 64px;
+        background: url(./assets/images/status-success.svg);
+        background-size: 100% 100%;
+    }
+    .closed {
+        width: 64px;
+        height: 64px;
+        background: url(./assets/images/closed.svg);
+        background-size: 100% 100%;
+    }
+    .stage-2 {
+        width: 64px;
+        height: 64px;
+        background: url(./assets/images/stage-2.svg);
+        background-size: 100% 100%;
+    }
+    .heart-white {
+        width: 20px;
+        height: 18px;
+        top: 37px;
+        right: 37px;
+        background-image: url(./assets/icons/heart-white.svg);
+        background-size: 100% 100%;
+    }
+    .heart-black {
+        width: 20px;
+        height: 18px;
+        top: 37px;
+        right: 37px;
+        background-image: url(./assets/icons/heart-black.svg);
+        background-size: 100% 100%;
+    }
+    .content-card {
+        width: 204px;
+        height: 290px;
+        margin-bottom: 108px;
+        border: 1px solid #E1E7EB;
+        box-shadow: 0px 4px 12px rgba(169, 178, 184, 0.2);
+        border-radius: 8px;
+        .bg-card {
+            width: 100%;
+            height: 136px;
+            background: url(./assets/images/photo.png);
+            background-size: 100% 100%;
+
+        }
+        .movie {
+            width: 66px;
+            height: 66px;
+            top: 106px;
+            background: url(./assets/icons/movie.svg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+        .world {
+            width: 66px;
+            height: 66px;
+            top: 106px;
+            background: url(./assets/icons/world.svg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+        .book {
+            width: 66px;
+            height: 66px;
+            top: 106px;
+            background: url(./assets/icons/book.svg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+        .title {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: #2E3D49;
+            opacity: 0.7;
+        }
+        .subtitle {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            color: #1B2B3A;
+            opacity: 0.5;
+        }
+    }
+    .read-more {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 13px;
+        color: #E8E8E8;
+        opacity: 0.8;
+    }
+    .marker {
+        width: 14px;
+        height: 18px;
+        background: url(./assets/icons/marker.svg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (max-width: 481px) {
+
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,22 @@
+::ng-deep .mat-tab-label-content {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    padding: 20px 0;
+    opacity: 0.5;
+}
+
+::ng-deep .mat-tab-labels {
+    padding: 30px 0 20px 0;
+}
+
+::ng-deep .mat-tab-label.mat-tab-label-active {
+    opacity: 1;
+}
+
+::ng-deep .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #B1B1B1;
+    height: 4px;
+    border-radius: 4px;
+}

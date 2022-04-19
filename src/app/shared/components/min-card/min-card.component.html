@@ -1,0 +1,9 @@
+<div class="m-3 flex flex-column justify-content-evenly text-center cursor-pointer" [ngClass]="{'min-card' : selected == 'false', 'min-card-selected min-card-rounded' : selected == 'true'}">
+    <div class="col-12 p-0 flex justify-content-center align-items-center">
+        <div class="circle {{background}} flex justify-content-center align-items-center relative">
+            <img src="../../../../assets/images/montain.svg" style="margin-top: 10px;">
+            <div class="icon-card {{icon}} z-4 absolute"></div>
+        </div>
+    </div>
+    <div class="title">{{title}}</div>
+</div>

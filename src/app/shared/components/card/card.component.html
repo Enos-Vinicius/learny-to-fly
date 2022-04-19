@@ -1,0 +1,14 @@
+<div class="mt-5 title-h4 text-start">{{title}}</div> 
+<div class="card mt-3 flex align-items-center relative" [ngStyle]="{'background' : background ? background : '', 'background-size' : background ? '100% 100%' : ''}">
+    <div class="absolute cursor-pointer" [ngClass]="{'heart-white' : background, 'heart-black': !background}"></div>
+    <div class="col-2 flex justify-content-center">
+        <div class={{status}}></div>
+    </div>
+    <div class="col-5 flex-column">
+        <span class="status-card">{{statusText}}</span>
+        <div class="title-card mt-3">{{titleCard}}</div>
+        <div class="time-card mt-3 flex">
+           <div class="time-icon mr-1"></div> {{time}}
+        </div>
+    </div>
+</div>

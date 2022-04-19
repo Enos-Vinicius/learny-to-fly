@@ -1,0 +1,38 @@
+<!--MENU CLOSED-->
+<div class="fixed top-0 left-0 menu-ltf flex-column flex justify-content-between align-items-center z-5">
+    <div>
+        <div *ngFor="let item of itemOpenMenu" [matMenuTriggerFor]="menu" class="menu-open flex justify-content-center align-items-center cursor-pointer">
+            <img src={{item.src}} alt={{item.alt}}>
+        </div>
+        <div class="menu-center">
+            <div *ngFor="let item of itemsMenuCenter" class="menu-item flex justify-content-center align-items-center cursor-pointer" routerLink={{item.router}} routerLinkActive="active-list-item">
+                <img src={{item.src}} alt={{item.alt}}>
+            </div>
+        </div>
+    </div>
+    <div class="menu-footer">
+        <div *ngFor="let item of itemsMenuFooter" class="menu-item flex justify-content-center align-items-center cursor-pointer">
+            <img src={{item.src}} alt={{item.alt}}>
+        </div>
+    </div>
+</div>
+
+<!--MENU OPEN-->
+<mat-menu #menu="matMenu" class="providers-menu flex-column flex justify-content-between z-5">
+    <div>
+        <button mat-menu-item *ngFor="let item of itemsMenuCenter" class="flex align-items-center no-active-list-item" routerLink={{item.router}} routerLinkActive="active-list-item" [routerLinkActiveOptions]="{exact: true}">
+            <div class="img-menu flex justify-content-center align-items-center" style="width: 40px;">
+                <img src={{item.src}} alt={{item.alt}}>
+            </div>
+          <span class="ml-4 title-menu">{{item.title}}</span>
+        </button>
+    </div>
+    <div>
+        <button mat-menu-item *ngFor="let item of itemsMenuFooter" class="flex align-items-center no-active-list-item" routerLink={{item.router}} routerLinkActive="active-list-item" [routerLinkActiveOptions]="{exact: true}">
+            <div class="img-menu flex justify-content-center align-items-center ">
+                <img  src={{item.src}} alt={{item.alt}}>
+            </div>
+          <span class="ml-4 title-menu ">{{item.title}}</span>
+        </button>
+    </div>
+</mat-menu>

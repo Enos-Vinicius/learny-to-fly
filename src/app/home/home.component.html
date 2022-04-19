@@ -1,0 +1,91 @@
+<div class="banner">
+    <div class="container flex justify-content-center align-items-end z-4">
+        <div class="ellipse"></div>
+        <div class="absolute vector z-3"></div>
+        <div class="absolute z-4 container-title flex flex-column">
+            <h2 class="title">Comunicação Eficaz</h2> 
+            <div class="flex-column col-4 p-0">
+                <p>Pessoas fazendo a trilha</p>
+                <div class="col-12 p-0 flex justify-content-between align-items-center">
+                    <div class="circle flex justify-content-center align-content-center" style="background-color: #C0DCD3;">
+                       <p>BS</p>
+                    </div>
+                    <div class="circle flex align-items-center justify-content-center" style="background-color: #B0EFFD;">
+                       <p>AT</p>
+                    </div>
+                    <div class="circle flex align-items-center justify-content-center" style="background-color: #E9B3DA;">
+                       <p>GR</p>
+                    </div>
+                    <div>+20</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<mat-tab-group class="tabs">
+    <mat-tab class="tabs-title" label="Atividades"> 
+        <div class="flex justify-content-center align-items-center">
+            
+            <div class="col-11 p-0 flex-column">
+                <div class="col-12 p-0 flex justify-content-center">
+                    <!--PILARES-->
+                    <div class="col-4 p-0 flex-column justify-content-center">
+                        <div class="mt-5 title-h3 text-center">Pilares da Comunicação Eficaz</div> 
+                        <div class="col-12 p-0 flex justify-content-center">
+                            <div *ngFor="let item of minCards" >
+                                <app-min-card 
+                                    icon="{{item.icon}}"
+                                    background="{{item.background}}"
+                                    title="{{item.title}}"
+                                    selected="{{item.selected}}"
+                                    (click)="setSelected(item)">
+                                </app-min-card>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 p-0 flex justify-content-center">
+                    <!--DESCUBRA-->
+                    <div class="col-6 p-0 flex-column justify-content-center">
+
+                        <div class="col-12 p-0 flex justify-content-start">
+                            <div class="col-12 p-0 flex-column" >
+                                <div  *ngFor="let item of cards">
+                                    <app-card
+                                        id="{{item.id}}"
+                                        statusText="{{item.statusText}}"
+                                        status="{{item.status}}"
+                                        background="{{item.background}}"
+                                        title="{{item.title}}"
+                                        time="{{item.time}}"
+                                        titleCard="{{item.titleCard}}">
+                                    </app-card>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 p-0 flex justify-content-center">
+                    <div class="col-6 p-0">
+                        <div class="title-h2 mt-5">Conteúdos recomendados</div>
+                        <div class="col-12 p-0 flex flex-row justify-content-between mt-4">
+                            <div *ngFor="let item of contentCards">
+                                <app-content-card 
+                                    title="{{item.title}}"                             
+                                    icon="{{item.icon}}"                             
+                                    subtitle="{{item.subtitle}}">
+                                </app-content-card>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </mat-tab>
+    <mat-tab class="tabs-title" label="Resultados"> Resultados </mat-tab>
+    <mat-tab class="tabs-title" label="Plano de Desenvolvimento"> Plano de Desenvolvimento </mat-tab>
+</mat-tab-group>

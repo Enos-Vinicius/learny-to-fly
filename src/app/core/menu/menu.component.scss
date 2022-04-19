@@ -1,0 +1,23 @@
+::ng-deep .mat-menu-panel.providers-menu  {
+    height: 100vh;
+    max-height: 100vh;
+    max-width: 350px;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    background: linear-gradient(180deg, #2684FF 0%, #23BFB6 100%);
+    color: #FFF;
+}
+
+::ng-deep .mat-menu-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.title-menu {
+    color: #FFF;
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+}
