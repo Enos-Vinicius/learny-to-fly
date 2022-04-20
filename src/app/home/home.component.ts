@@ -34,6 +34,9 @@ export class HomeComponent implements OnInit {
   mediunCardsArea = [
     {id: 1, numberCard: "1", circleColor: "#00A79D", background: "", textColor: "#000", title: "Clareza", subtitle: "Se expressar de forma objetiva e firme.", borderColor: "1px solid #D7D7D7"}
   ]
+
+  text = "Você faz parte do grupo de pessoas que ainda podem desenvolver sua comunicação como uma ferramenta poderosa na sua vida social. Você ainda tem certa dificuldade de expressar suas ideias e emoções com clareza e objetividade, adaptar sua fala ao contexto social de cada situação, além de compreender e ser facilmente compreendido pelos outros. Vamos aprender como desenvolver essas habilidades?"
+  text2 = "Você tem dificuldade de expressar suas ideias e opiniões de forma clara e precisa. Isso acontece porque você geralmente não consegue se manter presente nas conversas, prestando atenção tanto nos seus próprios pensamentos, quanto no que acontece ao seu redor. É comum você se sentir no piloto automático, como se não fosse o dono das suas próprias palavras."
   constructor() { }
 
   ngOnInit(): void {

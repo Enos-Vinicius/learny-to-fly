@@ -5,19 +5,7 @@
         <div class="absolute z-4 container-title flex flex-column">
             <h2 class="title">Comunicação Eficaz</h2> 
             <div class="flex-column col-4 p-0">
-                <p>Pessoas fazendo a trilha</p>
-                <div class="col-12 p-0 flex justify-content-between align-items-center">
-                    <div class="circle flex justify-content-center align-content-center" style="background-color: #C0DCD3;">
-                       <p>BS</p>
-                    </div>
-                    <div class="circle flex align-items-center justify-content-center" style="background-color: #B0EFFD;">
-                       <p>AT</p>
-                    </div>
-                    <div class="circle flex align-items-center justify-content-center" style="background-color: #E9B3DA;">
-                       <p>GR</p>
-                    </div>
-                    <div>+20</div>
-                </div>
+                <app-people-trail></app-people-trail>
             </div>
         </div>
     </div>
@@ -115,11 +103,7 @@
         </div>
         <div class="flex justify-content-center align-items-center">
             <div class="col-6 p-0 mt-5 text-results">
-                Você faz parte do grupo de pessoas que ainda podem desenvolver sua comunicação como 
-                uma ferramenta poderosa na sua vida social.  Você ainda tem certa dificuldade de expressar 
-                suas ideias e emoções com clareza e objetividade, adaptar sua fala ao contexto social de 
-                cada situação, além de compreender e ser facilmente compreendido pelos outros. 
-                Vamos aprender como desenvolver essas habilidades?
+                <app-text-card text="{{text}}"></app-text-card>
             </div>
         </div>
 
@@ -174,12 +158,8 @@
         
         <div class="flex justify-content-center align-items-start mt-3">
             <div class="col-6 flex-column">
-                <div class="col-12 text-center mt-5 title-explore">
-                    {{'explore seus resultados em cada pilar' | uppercase}}
-                </div>
-                <div class="col-12 p-0 flex justify-content-center mt-3">
-                    <div class="chart-pizza"></div>
-                </div>
+                <app-charts></app-charts>
+
                 <div class="col-12 p-0 flex justify-content-center">
                     <!--PILARES-->
                     <div class="col-4 p-0 flex justify-content-center">
@@ -204,13 +184,8 @@
                     <div class="title-comunication-h3">{{'CLAREZA BAIXA' | uppercase}}</div>
                     <div class="result-5"></div>
                 </div>
-                <div class="flex justify-content-center align-items-center">
-                    <div class="col-12 p-0 mt-5 text-results">
-                        Você tem dificuldade de expressar suas ideias e opiniões de forma clara e precisa. 
-                        Isso acontece porque você geralmente não consegue se manter presente nas conversas, 
-                        prestando atenção tanto nos seus próprios pensamentos, quanto no que acontece ao seu redor. 
-                        É comum você se sentir no piloto automático, como se não fosse o dono das suas próprias palavras.
-                    </div>
+                <div class="flex justify-content-center align-items-center text-results">
+                    <app-text-card text="{{text}}"></app-text-card>
                 </div>
                 <div class="mt-3 title-h5 cursor-pointer">Ver relatório completo</div>
             </div>
@@ -224,7 +199,7 @@
             </div>
         </div>
         <div class="flex justify-content-center align-items-center mt-3">
-            <div class="button-green flex justify-content-center align-items-center">
+            <div class="button-green flex justify-content-center align-items-center cursor-pointer">
                 Ver meu plano
             </div>
         </div>
