@@ -510,6 +510,13 @@ html, body { height: 100%; }
         color: #00A79D;
         max-width: 330px;
     }
+    .title-not-found-h3 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 38px;
+        line-height: 50px;
+        color: #00A79D;
+    }
     .text-results {
         font-style: normal;
         font-weight: 400;
@@ -1239,7 +1246,9 @@ html, body { height: 100%; }
         margin: 40px 0 217px 0;
     }
 }
-
+.no-drop {
+    cursor: no-drop;
+}
 .green-circle {background-color: #C0DCD3;}
 .blue-circle {background-color: #B0EFFD;}
 .red-circle {background-color: #E9B3DA;}

@@ -4,6 +4,7 @@ import { ChartsComponent } from "./charts/charts.component";
 import { ContentCardComponent } from "./content-card/content-card.component";
 import { MediumCardComponent } from "./medium-card/medium-card.component";
 import { MinCardComponent } from "./min-card/min-card.component";
+import { NotFoundComponent } from "./not-found/not-found.component";
 import { PeopleTrailComponent } from "./people-trail/people-trail.component";
 import { TextCardComponent } from "./text-card/text-card.component";
 
@@ -15,5 +16,6 @@ export const Components = [
     MediumCardComponent,
     PeopleTrailComponent,
     ChartsComponent,
-    TextCardComponent
+    TextCardComponent,
+    NotFoundComponent
 ]
