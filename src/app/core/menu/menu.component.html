@@ -1,17 +1,17 @@
 <!--MENU CLOSED-->
 <div class="fixed hidden top-0 left-0 menu-ltf md:flex-column md:flex md:justify-content-between md:align-items-center z-5">
     <div>
-        <div *ngFor="let item of itemOpenMenu" [matMenuTriggerFor]="menu" class="menu-open flex justify-content-center align-items-center cursor-pointer">
+        <div *ngFor="let item of itemOpenMenu" [matMenuTriggerFor]="menu" class="menu-open flex justify-content-center align-items-center {{item.cursor}}">
             <img src={{item.src}} alt={{item.alt}}>
         </div>
         <div class="menu-center">
-            <div *ngFor="let item of itemsMenuCenter" class="menu-item flex justify-content-center align-items-center cursor-pointer" routerLink={{item.router}} routerLinkActive="active-list-item">
+            <div *ngFor="let item of itemsMenuCenter" class="menu-item flex justify-content-center align-items-center {{item.cursor}}" routerLink={{item.router}} routerLinkActive="active-list-item" [routerLinkActiveOptions]="{exact: true}">
                 <img src={{item.src}} alt={{item.alt}}>
             </div>
         </div>
     </div>
     <div class="menu-footer">
-        <div *ngFor="let item of itemsMenuFooter" class="menu-item flex justify-content-center align-items-center cursor-pointer">
+        <div *ngFor="let item of itemsMenuFooter" class="menu-item flex justify-content-center align-items-center {{item.cursor}}">
             <img src={{item.src}} alt={{item.alt}}>
         </div>
     </div>
@@ -19,7 +19,7 @@
 
 <!--ICON MENU MOBILE-->
 <div class="menu-ltf-mobile">
-    <div *ngFor="let item of itemOpenMenu" [matMenuTriggerFor]="menu" class="menu-open flex justify-content-center align-items-center cursor-pointer  z-5">
+    <div *ngFor="let item of itemOpenMenu" [matMenuTriggerFor]="menu" class="menu-open flex justify-content-center align-items-center {{item.cursor}} z-5">
         <img src={{item.src}} alt={{item.alt}}>
     </div>
 </div>
@@ -28,18 +28,18 @@
 <mat-menu #menu="matMenu" class="providers-menu flex-column flex justify-content-between z-5">
     <div>
         <button mat-menu-item *ngFor="let item of itemsMenuCenter" class="flex align-items-center no-active-list-item" routerLink={{item.router}} routerLinkActive="active-list-item" [routerLinkActiveOptions]="{exact: true}">
-            <div class="img-menu flex justify-content-center align-items-center" style="width: 40px;">
+            <div class="img-menu flex justify-content-center align-items-center {{item.cursor}}" style="width: 40px;">
                 <img src={{item.src}} alt={{item.alt}}>
             </div>
-          <span class="ml-4 title-menu">{{item.title}}</span>
+          <span class="ml-4 title-menu {{item.cursor}}">{{item.title}}</span>
         </button>
     </div>
     <div>
         <button mat-menu-item *ngFor="let item of itemsMenuFooter" class="flex align-items-center no-active-list-item" routerLink={{item.router}} routerLinkActive="active-list-item" [routerLinkActiveOptions]="{exact: true}">
-            <div class="img-menu flex justify-content-center align-items-center ">
-                <img  src={{item.src}} alt={{item.alt}}>
+            <div class="img-menu flex justify-content-center align-items-center {{item.cursor}}">
+                <img src={{item.src}} alt={{item.alt}}>
             </div>
-          <span class="ml-4 title-menu ">{{item.title}}</span>
+          <span class="ml-4 title-menu {{item.cursor}}">{{item.title}}</span>
         </button>
     </div>
 </mat-menu>

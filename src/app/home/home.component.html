@@ -16,6 +16,7 @@
         </div>
     </div>
 </div>
+
 <mat-tab-group class="tabs">
     
     <!--ATIVIDADES-->
@@ -43,7 +44,7 @@
 
                 <div class="col-12 p-0 flex justify-content-center">
                     <!--DESCUBRA-->
-                    <div class="md:col-6 p-0 flex-column justify-content-center">
+                    <div class="md:col-7 p-0 flex-column justify-content-center">
 
                         <div class="col-12 p-0 flex justify-content-start">
                             <div class="col-12 p-0 flex-column" >
@@ -64,7 +65,7 @@
                 </div>
 
                 <div class="col-12 p-0 flex justify-content-center">
-                    <div class="col-11 md:col-6 p-0">
+                    <div class="col-11 md:col-7 p-0">
                         <div class="title-h2 mt-5">Conteúdos recomendados</div>
                         <div class="col-12 p-0 flex flex-row justify-content-between mt-4 overflow-auto">
                             <div class="ml-3" *ngFor="let item of contentCards">
@@ -87,7 +88,7 @@
     <mat-tab class="tabs-title" label="Resultados"> 
         <div class="flex justify-content-center align-items-center">
             <div class="col-11 flex justify-content-center p-0">
-                <div class="flex flex-column md:col-6 p-3">                   
+                <div class="flex flex-column md:col-7 p-3">                   
                     <div class="col-12 mt-4 flex flex-column align-items-center justify-content-center">
                         <app-awards></app-awards>
                         <div class="title-completed mt-7">COMPLETADO 23/12/2021</div>
@@ -97,7 +98,7 @@
         </div>
 
         <div class="flex justify-content-center align-items-center">
-            <div class="md:col-6 flex justify-content-between p-0">
+            <div class="md:col-7 flex justify-content-between p-0">
                 <div class="col-3 md:col-4">
                     <div class="avatar-succes"></div>
                 </div>
@@ -108,21 +109,21 @@
             </div>
         </div>
         <div class="flex justify-content-center align-items-center">
-            <div class="col-11 md:col-6 p-0 mt-5 text-results">
+            <div class="col-11 md:col-7 p-0 mt-5 text-results">
                 <app-text-card text="{{text}}"></app-text-card>
             </div>
         </div>
 
         <!--MEDIUNS CARDS-->
         <div class="flex md:justify-content-center align-items-start mt-3">
-            <div class="md:col-6 p-0 mt-3 ml-4 md:ml-0 flex">
+            <div class="md:col-7 p-0 mt-3 ml-4 md:ml-0 flex">
                 <div class="icon-barra"></div>
                 <div class="title-results ml-3">Suas forças</div>
             </div>
         </div>
 
         <div class="flex md:justify-content-center align-items-start">
-            <div class="md:col-6 ml-4 md:ml-0 p-0 flex flex-wrap justify-content-start align-content-between">
+            <div class="md:col-7 ml-4 md:ml-0 p-0 flex flex-wrap justify-content-start align-content-between">
                 <div *ngFor="let item of mediunCards; index as i">
                     <div [ngStyle]="{'margin-left' : i > 0 ? '25px': ''}">
                         <app-medium-card
@@ -139,14 +140,14 @@
         </div>
 
         <div class="flex md:justify-content-center align-items-start mt-3">
-            <div class="md:col-6 p-0 mt-3 ml-4 md:ml-0 flex">
+            <div class="md:col-7 p-0 mt-3 ml-4 md:ml-0 flex">
                 <div class="icon-holding"></div>
                 <div class="title-results ml-3">Suas áreas de desenvolvimento</div>
             </div>
         </div>
 
         <div class="flex md:justify-content-center align-items-start">
-            <div class="md:col-6 ml-4 md:ml-0 p-0 flex flex-wrap justify-content-between align-content-between">
+            <div class="md:col-7 ml-4 md:ml-0 p-0 flex flex-wrap justify-content-between align-content-between">
                 <div *ngFor="let item of mediunCardsArea">
                     <app-medium-card
                         circleColor="{{item.circleColor}}"
@@ -163,7 +164,7 @@
         <!--END MEDIUNS CARDS-->
         
         <div class="flex justify-content-center align-items-start mt-3">
-            <div class="md:col-6 flex-column">
+            <div class="md:col-7 flex-column">
                 <app-charts></app-charts>
 
                 <div class="col-12 p-0 flex justify-content-center">
@@ -197,7 +198,7 @@
             </div>
         </div>
         <div class="flex justify-content-center align-items-center mt-3">
-            <div class="col-11 md:col-6">
+            <div class="col-11 md:col-7">
                 <div class="card-green relative flex justify-content-center">
                     <div class="smile-king absolute"></div>
                     <div class="absolute title-card-green">Com seus resultados em mãos, é hora de criar seu plano de desenvolvimento para colocar em prática os conceitos, recursos e dicas que aprendemos ao longo da trilha. </div>

@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { CardService } from '../shared/service/card.service';
+import { ContentCardsService } from '../shared/service/content-cards.service';
+import { MediunCardsAreaService } from '../shared/service/mediun-cards-area.service';
+import { MediunCardsService } from '../shared/service/mediun-cards.service';
+import { MinCardsService } from '../shared/service/min-cards.service';
 
 @Component({
   selector: 'app-home',
@@ -7,39 +12,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  minCards = [
-    {icon: "sun-line", title: "Clareza", background: "green_clarity", selected: true},
-    {icon: "target",   title: "Objetividade", background: "green_objectivity", selected: false},
-    {icon: "heart",    title: "Compreensão", background: "green_understanding", selected: false},
-  ]
-
-  cards = [
-    {id: 1, status: "success", time: "2 minutos", title: "Descubra mais sobre você", titleCard: "Minha comunicação é clara?", statusText: "Identificar", background: "url(./assets/images/bg-card.png)"},
-    {id: 2, status: "stage-2", time: "4 minutos", title: "Desenvolva suas habilidades", titleCard: "Comunicação consciente", statusText: "Aprender", background: ""},
-    {id: 3, status: "closed", time: "10 minutos", title: "", titleCard: "10 práticas para uma boa comunicação", statusText: "Praticar", background: ""},
-    {id: 3, status: "closed", time: "2 minutos", title: "", titleCard: "4 regras da boa comunicação", statusText: "Mapear", background: ""},
-  ]
-
-  contentCards = [
-    {id: 1, icon: "book",  title: "What Your Most Vivid Memories Say About You", subtitle: "Even when we believe that we’ve created a happy, ideal life for…"},
-    {id: 2, icon: "movie", title: "What Your Most Vivid Memories Say About You", subtitle: "Even when we believe that we’ve created a happy, ideal life for…"},
-    {id: 3, icon: "world", title: "What Your Most Vivid Memories Say About You", subtitle: "Even when we believe that we’ve created a happy, ideal life for…"},
-  ]
-
-  mediunCards = [
-    {id: 1, numberCard: "1", circleColor: "#00A79D", background: "linear-gradient(45deg, #33B8B0 0%, #5FECB4 100%)", textColor: "#FFF", title: "Objetividade", subtitle: "Se expressar de forma objetiva e firme."},
-    {id: 2, numberCard: "2", circleColor: "#5AD3A0", background: "linear-gradient(45deg, #33B8B0 0%, #5FECB4 100%)", textColor: "#FFF", title: "Compreensão", subtitle: "Compreender e ser compreendido de maneira precisa pelas pessoas."},
-  ]
-
-  mediunCardsArea = [
-    {id: 1, numberCard: "1", circleColor: "#00A79D", background: "", textColor: "#000", title: "Clareza", subtitle: "Se expressar de forma objetiva e firme.", borderColor: "1px solid #D7D7D7"}
-  ]
+  minCards = []
+  cards = [];
+  contentCards = []
+  mediunCards = []
+  mediunCardsArea = []
 
   text = "Você faz parte do grupo de pessoas que ainda podem desenvolver sua comunicação como uma ferramenta poderosa na sua vida social. Você ainda tem certa dificuldade de expressar suas ideias e emoções com clareza e objetividade, adaptar sua fala ao contexto social de cada situação, além de compreender e ser facilmente compreendido pelos outros. Vamos aprender como desenvolver essas habilidades?"
   text2 = "Você tem dificuldade de expressar suas ideias e opiniões de forma clara e precisa. Isso acontece porque você geralmente não consegue se manter presente nas conversas, prestando atenção tanto nos seus próprios pensamentos, quanto no que acontece ao seu redor. É comum você se sentir no piloto automático, como se não fosse o dono das suas próprias palavras."
-  constructor() { }
+  
+  constructor(
+    private cardService: CardService,
+    private minCardService: MinCardsService,
+    private contentCardService: ContentCardsService,
+    private mediunCardsService: MediunCardsService,
+    private mediunCardsAreaService: MediunCardsAreaService,
+  ) { }
 
   ngOnInit(): void {
+    this.getCards();
+    this.getMinCards();
+    this.getcontentCards();
+    this.getmediunCards();
+    this.getmediunCardsArea();
   }
 
   setSelected(item: any){
@@ -52,4 +47,25 @@ export class HomeComponent implements OnInit {
       item.selected = false;
     }
   }
+
+  getCards(){
+    this.cardService.getAll().subscribe(res => this.cards = res, err => console.log("Err:: ", err))
+  }
+
+  getMinCards(){
+    this.minCardService.getAll().subscribe(res => this.minCards = res, err => console.log("Err:: ", err))
+  }
+
+  getcontentCards(){
+    this.contentCardService.getAll().subscribe(res => this.contentCards = res, err => console.log("Err:: ", err))
+  }
+
+  getmediunCards(){
+    this.mediunCardsService.getAll().subscribe(res => this.mediunCards = res, err => console.log("Err:: ", err))
+  }
+
+  getmediunCardsArea(){
+    this.mediunCardsAreaService.getAll().subscribe(res => this.mediunCardsArea = res, err => console.log("Err:: ", err))
+  }
+
 }
