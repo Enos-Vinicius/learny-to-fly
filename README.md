@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
 
+## Dependences
+
+  Angular Material :::>>> https://material.angular.io/
+  PrimeFlex :::>>> https://primefaces.org/primeflex/
+  Angular In Memory Database :::>>> https://www.npmjs.com/package/angular-in-memory-web-api
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
