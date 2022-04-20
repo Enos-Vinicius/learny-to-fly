@@ -1,0 +1,7 @@
+<div class="medium-card mt-3" [ngStyle]="{'background-image': background, 'border' : borderColor ? borderColor : ''}">
+    <div class="flex justify-content-start align-items-center">
+        <div class="min-circle m-3 flex justify-content-center align-items-center" [ngStyle]="{'background-color': circleColor}">{{numberCard}}</div>
+        <div class="title-medium-card" [ngStyle]="{'color': textColor}">{{title}}</div>
+    </div>
+    <div class="ml-3 text-medium-card" [ngStyle]="{'color': textColor}" >{{subtitle}}</div>
+</div>

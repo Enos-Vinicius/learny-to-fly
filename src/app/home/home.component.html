@@ -23,6 +23,8 @@
     </div>
 </div>
 <mat-tab-group class="tabs">
+    
+    <!--ATIVIDADES-->
     <mat-tab class="tabs-title" label="Atividades"> 
         <div class="flex justify-content-center align-items-center">
             
@@ -86,6 +88,151 @@
 
         </div>
     </mat-tab>
-    <mat-tab class="tabs-title" label="Resultados"> Resultados </mat-tab>
-    <mat-tab class="tabs-title" label="Plano de Desenvolvimento"> Plano de Desenvolvimento </mat-tab>
+
+    <!--RESULTADOS-->
+    <mat-tab class="tabs-title" label="Resultados"> 
+        <div class="flex justify-content-center align-items-center">
+            <div class="col-11 flex justify-content-center p-0">
+                <div class="flex flex-column col-6 p-3">                   
+                    <div class="col-12 mt-4 flex flex-column align-items-center justify-content-center">
+                        <app-awards></app-awards>
+                        <div class="title-completed mt-7">COMPLETADO 23/12/2021</div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+
+        <div class="flex justify-content-center align-items-center">
+            <div class="col-6 flex justify-content-between p-0">
+                <div class="col-4">
+                    <div class="avatar-succes"></div>
+                </div>
+                <div class="col-7 p-0 flex-column">
+                    <div class="title-comunication mt-3">{{'Hoje sua comunicação' | uppercase}}</div>
+                    <div class="title-comunication-h3">{{'Ainda não é eficaz' | uppercase}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-content-center align-items-center">
+            <div class="col-6 p-0 mt-5 text-results">
+                Você faz parte do grupo de pessoas que ainda podem desenvolver sua comunicação como 
+                uma ferramenta poderosa na sua vida social.  Você ainda tem certa dificuldade de expressar 
+                suas ideias e emoções com clareza e objetividade, adaptar sua fala ao contexto social de 
+                cada situação, além de compreender e ser facilmente compreendido pelos outros. 
+                Vamos aprender como desenvolver essas habilidades?
+            </div>
+        </div>
+
+        <!--MEDIUNS CARDS-->
+        <div class="flex justify-content-center align-items-start mt-3">
+            <div class="col-6 p-0 mt-3 flex">
+                <div class="icon-barra"></div>
+                <div class="title-results ml-3">Suas forças</div>
+            </div>
+        </div>
+
+        <div class="flex justify-content-center align-items-start">
+            <div class="col-6 p-0 flex flex-wrap justify-content-start align-content-between">
+                <div *ngFor="let item of mediunCards; index as i">
+                    <div [ngStyle]="{'margin-left' : i > 0 ? '25px': ''}">
+                        <app-medium-card
+                            circleColor="{{item.circleColor}}"    
+                            background="{{item.background}}"
+                            textColor="{{item.textColor}}"
+                            title="{{item.title}}"
+                            numberCard="{{item.numberCard}}"
+                            subtitle="{{item.subtitle}}"    
+                        ></app-medium-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-content-center align-items-start mt-3">
+            <div class="col-6 p-0 mt-3 flex">
+                <div class="icon-holding"></div>
+                <div class="title-results ml-3">Suas áreas de desenvolvimento</div>
+            </div>
+        </div>
+
+        <div class="flex justify-content-center align-items-start">
+            <div class="col-6 p-0 flex flex-wrap justify-content-between align-content-between">
+                <div *ngFor="let item of mediunCardsArea">
+                    <app-medium-card
+                        circleColor="{{item.circleColor}}"
+                        background="{{item.background}}"
+                        textColor="{{item.textColor}}"
+                        title="{{item.title}}"
+                        borderColor="{{item.borderColor}}"
+                        numberCard="{{item.numberCard}}"
+                        subtitle="{{item.subtitle}}"    
+                    ></app-medium-card>
+                </div>
+            </div>
+        </div>
+        <!--END MEDIUNS CARDS-->
+        
+        <div class="flex justify-content-center align-items-start mt-3">
+            <div class="col-6 flex-column">
+                <div class="col-12 text-center mt-5 title-explore">
+                    {{'explore seus resultados em cada pilar' | uppercase}}
+                </div>
+                <div class="col-12 p-0 flex justify-content-center mt-3">
+                    <div class="chart-pizza"></div>
+                </div>
+                <div class="col-12 p-0 flex justify-content-center">
+                    <!--PILARES-->
+                    <div class="col-4 p-0 flex justify-content-center">
+                        <div class="col-12 p-0 flex justify-content-center">
+                            <div *ngFor="let item of minCards" >
+                                <app-min-card 
+                                    icon="{{item.icon}}"
+                                    background="{{item.background}}"
+                                    title="{{item.title}}"
+                                    selected="{{item.selected}}"
+                                    (click)="setSelected(item)">
+                                </app-min-card>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-content-center align-items-center">
+                    <div class="text-results mt-5">{{'Hoje sua comunicação tem' | uppercase}}</div>
+                </div>
+                <div class="flex justify-content-between align-items-center">
+                    <div class="dolls"></div>
+                    <div class="title-comunication-h3">{{'CLAREZA BAIXA' | uppercase}}</div>
+                    <div class="result-5"></div>
+                </div>
+                <div class="flex justify-content-center align-items-center">
+                    <div class="col-12 p-0 mt-5 text-results">
+                        Você tem dificuldade de expressar suas ideias e opiniões de forma clara e precisa. 
+                        Isso acontece porque você geralmente não consegue se manter presente nas conversas, 
+                        prestando atenção tanto nos seus próprios pensamentos, quanto no que acontece ao seu redor. 
+                        É comum você se sentir no piloto automático, como se não fosse o dono das suas próprias palavras.
+                    </div>
+                </div>
+                <div class="mt-3 title-h5 cursor-pointer">Ver relatório completo</div>
+            </div>
+        </div>
+        <div class="flex justify-content-center align-items-center mt-3">
+            <div class="col-6">
+                <div class="card-green relative flex justify-content-center">
+                    <div class="smile-king absolute"></div>
+                    <div class="absolute title-card-green">Com seus resultados em mãos, é hora de criar seu plano de desenvolvimento para colocar em prática os conceitos, recursos e dicas que aprendemos ao longo da trilha. </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-content-center align-items-center mt-3">
+            <div class="button-green flex justify-content-center align-items-center">
+                Ver meu plano
+            </div>
+        </div>
+    </mat-tab>
+
+    <mat-tab class="tabs-title" label="Plano de Desenvolvimento"> 
+        <div class="flex justify-content-center align-items-center mt-7">
+            EM BREVE 
+        </div>    
+    </mat-tab>
 </mat-tab-group>

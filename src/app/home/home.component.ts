@@ -25,6 +25,15 @@ export class HomeComponent implements OnInit {
     {id: 2, icon: "movie", title: "What Your Most Vivid Memories Say About You", subtitle: "Even when we believe that we’ve created a happy, ideal life for…"},
     {id: 3, icon: "world", title: "What Your Most Vivid Memories Say About You", subtitle: "Even when we believe that we’ve created a happy, ideal life for…"},
   ]
+
+  mediunCards = [
+    {id: 1, numberCard: "1", circleColor: "#00A79D", background: "linear-gradient(45deg, #33B8B0 0%, #5FECB4 100%)", textColor: "#FFF", title: "Objetividade", subtitle: "Se expressar de forma objetiva e firme."},
+    {id: 2, numberCard: "2", circleColor: "#5AD3A0", background: "linear-gradient(45deg, #33B8B0 0%, #5FECB4 100%)", textColor: "#FFF", title: "Compreensão", subtitle: "Compreender e ser compreendido de maneira precisa pelas pessoas."},
+  ]
+
+  mediunCardsArea = [
+    {id: 1, numberCard: "1", circleColor: "#00A79D", background: "", textColor: "#000", title: "Clareza", subtitle: "Se expressar de forma objetiva e firme.", borderColor: "1px solid #D7D7D7"}
+  ]
   constructor() { }
 
   ngOnInit(): void {
