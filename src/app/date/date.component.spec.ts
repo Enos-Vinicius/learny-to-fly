@@ -19,7 +19,7 @@ describe('DateComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Criado modulo Data', () => {
     expect(component).toBeTruthy();
   });
 });

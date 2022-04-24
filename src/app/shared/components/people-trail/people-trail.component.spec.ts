@@ -19,7 +19,7 @@ describe('PeopleTrailComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Criado component People Trail', () => {
     expect(component).toBeTruthy();
   });
 });

@@ -19,7 +19,7 @@ describe('MediumCardComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Criado component Medium Card', () => {
     expect(component).toBeTruthy();
   });
 });

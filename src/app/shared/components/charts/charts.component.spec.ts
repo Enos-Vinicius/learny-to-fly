@@ -19,7 +19,7 @@ describe('ChartsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Criado component Charts', () => {
     expect(component).toBeTruthy();
   });
 });

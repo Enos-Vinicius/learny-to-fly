@@ -19,7 +19,7 @@ describe('AwardsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Criado component Awards', () => {
     expect(component).toBeTruthy();
   });
 });

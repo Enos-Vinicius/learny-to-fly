@@ -19,7 +19,7 @@ describe('MinCardComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Criado comoponent Min Card', () => {
     expect(component).toBeTruthy();
   });
 });
