@@ -19,7 +19,7 @@ describe('NotFoundComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Criado component Not Found', () => {
     expect(component).toBeTruthy();
   });
 });

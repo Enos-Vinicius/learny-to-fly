@@ -1,3 +1,4 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 
 import { MediunCardsAreaService } from './mediun-cards-area.service';
@@ -6,11 +7,14 @@ describe('MediunCardsAreaService', () => {
   let service: MediunCardsAreaService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule], 
+      providers: [MediunCardsAreaService]
+    });
     service = TestBed.inject(MediunCardsAreaService);
   });
 
-  it('should be created', () => {
+  it('Criado MediumCardService', () => {
     expect(service).toBeTruthy();
   });
 });

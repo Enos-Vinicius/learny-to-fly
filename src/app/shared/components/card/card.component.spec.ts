@@ -19,7 +19,7 @@ describe('CardComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Criado component Card', () => {
     expect(component).toBeTruthy();
   });
 });

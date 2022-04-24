@@ -19,7 +19,7 @@ describe('ExploreComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Criado modulo Explore', () => {
     expect(component).toBeTruthy();
   });
 });
