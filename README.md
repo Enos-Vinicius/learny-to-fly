@@ -7,6 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   - Angular Material :::>>> https://material.angular.io/
   - PrimeFlex :::>>> https://primefaces.org/primeflex/
   - Angular In Memory Database :::>>> https://www.npmjs.com/package/angular-in-memory-web-api
+  - Versão do Node recomendada:::>>> 14.17.5
 
 ## Development server
 
